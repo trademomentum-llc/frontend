@@ -37,4 +37,5 @@ jobs:
           password: ${{ secrets.CPANEL_FTP_PASSWORD }}
           server-dir: ${{ secrets.CPANEL_FTP_TARGET_DIR }}
           local-dir: dist/
+          # Use SFTP if your cPanel host supports it; FTPS is the secure fallback here.
           protocol: ftps
