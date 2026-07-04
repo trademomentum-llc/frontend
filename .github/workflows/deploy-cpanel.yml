@@ -6,6 +6,9 @@ on:
       - main
   workflow_dispatch:
 
+permissions:
+  contents: read
+
 jobs:
   deploy:
     runs-on: ubuntu-latest
@@ -34,3 +37,4 @@ jobs:
           password: ${{ secrets.CPANEL_FTP_PASSWORD }}
           server-dir: ${{ secrets.CPANEL_FTP_TARGET_DIR }}
           local-dir: dist/
+          protocol: ftps

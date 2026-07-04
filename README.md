@@ -7,14 +7,14 @@ Use **Vercel** for CI/preview/production deploys of the React/Vite app, and use 
 Why: Vercel does not natively "push" your build artifacts to cPanel hosting, so keeping cPanel publishing as its own workflow is the most reliable approach.
 
 ## Vercel configuration
-This repository includes `/home/runner/work/frontend/frontend/vercel.json` with Vite defaults:
+This repository includes `vercel.json` with Vite defaults:
 - build command: `npm run build`
 - output directory: `dist`
 
 Connect this repository in Vercel and set project env vars there if needed.
 
 ## cPanel publish workflow
-This repository includes `/home/runner/work/frontend/frontend/.github/workflows/deploy-cpanel.yml`.
+This repository includes `.github/workflows/deploy-cpanel.yml`.
 
 On pushes to `main` (or manual dispatch), it:
 1. Installs dependencies (`npm ci`)
